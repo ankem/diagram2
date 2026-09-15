@@ -1,0 +1,24 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #183b38;
+  background: #f4f5ee;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+main { width: min(100%, 480px); margin: 0 auto; padding: clamp(24px, 6vw, 64px) 20px 24px; text-align: center; }
+.eyebrow { color: #49635f; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+h1 { margin: 12px 0; font-size: clamp(2.2rem, 8vw, 3.2rem); letter-spacing: -.05em; }
+.intro, .hint { color: #49635f; line-height: 1.6; }
+#status { margin: 28px 0 18px; font-size: 1.3rem; font-weight: 700; }
+#board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+button { font: inherit; touch-action: manipulation; cursor: pointer; }
+.cell { aspect-ratio: 1; min-width: 0; border: 2px solid #c6d4ce; border-radius: 16px; background: #fff; color: #17645c; font-size: clamp(2rem, 12vw, 4rem); font-weight: 700; }
+.cell[data-mark="O"] { color: #a24a2e; }
+.cell[aria-disabled="true"] { cursor: default; }
+.cell[aria-disabled="false"]:hover { background: #e6f0e9; border-color: #17645c; }
+button:focus-visible { outline: 3px solid #183b38; outline-offset: 4px; }
+#restart { margin-top: 26px; min-height: 48px; padding: 12px 28px; border: 2px solid #183b38; border-radius: 999px; color: #fff; background: #183b38; font-weight: 650; }
+#restart:hover { background: #286057; }
+.hint { font-size: .85rem; }
+@media (forced-colors: active) { .cell { border-color: ButtonText; } }

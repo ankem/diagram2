@@ -23,6 +23,8 @@ npm run test:e2e
 
 Rules tests cover all eight winning lines for both players, invalid and occupied moves, immutable state, terminal games, draws, and ninth-move/multiple-line wins. Browser tests cover play, restart, reload, keyboard controls, accessible labels, live-status markup, and 320px/desktop layouts.
 
+Server tests also run with `npm test`: they verify public assets, HEAD requests, rejected paths and methods, and file-read failures. If startup reports that port 4173 is in use, stop the other local server before retrying `npm start`.
+
 For manual accessibility verification, play using Tab and Enter/Space, check visible focus, and use a screen reader to confirm turn and result announcements. Automated tests do not verify spoken announcements.
 
 ## Implementation
